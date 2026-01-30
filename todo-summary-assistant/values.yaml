@@ -4,13 +4,13 @@ serviceAccount:
   name: todo-service-account
 
 mysql:
-  image: kdilipkumar/todosummary-database:36
+  image: kdilipkumar/todosummary-database:37
   rootPassword: admin
   database: todo_db
   storage: 1Gi
 
 backend:
-  image: kdilipkumar/todosummary-backend:36
+  image: kdilipkumar/todosummary-backend:37
   port: 8080
   env:
     SPRING_DATASOURCE_USERNAME: root
@@ -19,5 +19,5 @@ backend:
     SLACK_WEBHOOK_URL: "<SLACK_WEBHOOK_URL>"
 
 frontend:
-  image: kdilipkumar/todosummary-frontend:36
+  image: kdilipkumar/todosummary-frontend:37
   port: 80
