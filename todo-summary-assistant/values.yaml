@@ -1,0 +1,23 @@
+namespace: todo-app
+
+serviceAccount:
+  name: todo-service-account
+
+mysql:
+  image: kdilipkumar/todosummary-database:33
+  rootPassword: admin
+  database: todo_db
+  storage: 1Gi
+
+backend:
+  image: kdilipkumar/todosummary-backend:33
+  port: 8080
+  env:
+    SPRING_DATASOURCE_USERNAME: root
+    SPRING_DATASOURCE_PASSWORD: admin
+    COHERE_API_KEY: "<COHERE_API_KEY>"
+    SLACK_WEBHOOK_URL: "<SLACK_WEBHOOK_URL>"
+
+frontend:
+  image: kdilipkumar/todosummary-frontend:33
+  port: 80

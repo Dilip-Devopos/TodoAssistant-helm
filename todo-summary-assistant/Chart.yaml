@@ -1,0 +1,5 @@
+apiVersion: v2
+name: todo-summary-assistant
+description: Helm chart for Todo Summary Assistant
+version: 0.1.0
+appVersion: "1.0.0"
