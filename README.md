@@ -573,5 +573,3 @@ helm repo index .
 ```
 
 ---
-
-**Deployed with ♥️ using GitOps and Kubernetes**
